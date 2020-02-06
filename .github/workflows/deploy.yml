@@ -14,7 +14,7 @@ jobs:
           browser: chrome
           headless: true
           start: npm start
-          start: npm run server
+          server: npm run server
           wait-on: http://localhost:3000
   build:
     runs-on: ubuntu-latest
