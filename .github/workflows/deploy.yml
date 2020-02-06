@@ -13,7 +13,7 @@ jobs:
         with:
           browser: chrome
           headless: true
-          start: npm start & npm run server
+          start: npm run startwithmock
           wait-on: http://localhost:3000
   build:
     runs-on: ubuntu-latest
