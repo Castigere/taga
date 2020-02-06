@@ -8,14 +8,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Start mock-server
-        run: npm run server
       - name: Cypress run
         uses: cypress-io/github-action@v1
         with:
           browser: chrome
           headless: true
-          start: npm start
+          start: npm start & npm run server
           wait-on: http://localhost:3000
   build:
     runs-on: ubuntu-latest
