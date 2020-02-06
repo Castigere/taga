@@ -8,9 +8,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Start mock-server
+        run: npm run server
       - name: Cypress run
         uses: cypress-io/github-action@v1
-        run: npm run server
         with:
           browser: chrome
           headless: true
