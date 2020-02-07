@@ -21,7 +21,7 @@ jobs:
           pwd
       - name: last opp bilde
         run: |
-          curl -F file=@/home/runner/work/taga/taga/cypress/screenshots/test_spec.js/Test test -- Test 1.png -F "initial_comment=Shakes the cat" -F channels=paw-cypress-test -H "Authorization: Bearer xoxb-190758744758-943609432199-dlcYOVl10bUduX0DA6t4IR3d" https://slack.com/api/files.upload
+          curl -F 'file=@/home/runner/work/taga/taga/cypress/screenshots/test_spec.js/Test test -- Test 1.png' -F "initial_comment=Shakes the cat" -F channels=paw-cypress-test -H "Authorization: Bearer xoxb-190758744758-943609432199-dlcYOVl10bUduX0DA6t4IR3d" https://slack.com/api/files.upload
 
   build:
     runs-on: ubuntu-latest
