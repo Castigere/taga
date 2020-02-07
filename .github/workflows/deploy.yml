@@ -23,7 +23,7 @@ jobs:
         env:
           SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
         run: |
-          curl -F 'file=@/home/runner/work/taga/taga/cypress/screenshots/test_spec.js/Test test -- Test 1.png' -F "initial_comment=Shakes the cat" -F channels=paw-cypress-test -H "${SLACK_TOKEN}" https://slack.com/api/files.upload
+          curl -F 'file=@/home/runner/work/taga/taga/cypress/screenshots/test_spec.js/Test test -- Test 1.png' -F "initial_comment=Shakes the cat" -F "channels=paw-cypress-test" -H "${SLACK_TOKEN}" https://slack.com/api/files.upload
 
   build:
     runs-on: ubuntu-latest
