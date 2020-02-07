@@ -15,6 +15,10 @@ jobs:
           headless: true
           start: npm run startwithmock
           wait-on: http://localhost:3000
+      - name: Post til Slack
+        run: |
+          curl -X POST -H 'Content-type: application/json' --data '{"text":"Hello, World!"}' https://hooks.slack.com/services/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
+
   build:
     runs-on: ubuntu-latest
     needs: cypress-run
