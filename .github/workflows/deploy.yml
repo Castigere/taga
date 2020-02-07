@@ -15,9 +15,13 @@ jobs:
           headless: true
           start: npm run startwithmock
           wait-on: http://localhost:3000
-      - name: Sjekk screenshot
+      - name: upload screenshot
         run: |
-          ls cypress/screenshots
+          curl -F file=@"cypress/screenshots/test_spec.j/Test test -- Test 1.png" -F "initial_comment=Shakes the cat" -F channels=paw-cypress-test -H "Authorization: Bearer xoxb-190758744758-943609432199-aeN0dWTj5nGyooVwxr0Np24r" https://slack.com/api/files.upload
+      - name: debug
+        run: |
+          ls cypress/screenshots/test_spec.js
+          pwd
   build:
     runs-on: ubuntu-latest
     needs: cypress-run
