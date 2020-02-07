@@ -4,5 +4,6 @@ describe('Test test', () => {
         cy.visit('localhost:3000');
         cy.get('[id=root]')
             .should('contain', 'Edit');
+        cy.screenshot();
     });
 });
