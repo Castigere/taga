@@ -19,7 +19,7 @@ jobs:
         uses: castigere/taja@master
         with:
           slack-token: ${{ secrets.SLACK_TOKEN }}
-          picture-path: "/cypress/screenshots"
+          picture-path: "cypress/screenshots"
           channels: "paw-cypress-test"
           message: "Første test"
   # build:
