@@ -21,7 +21,7 @@ jobs:
           slack-token: ${{ secrets.SLACK_TOKEN }}
           picture-path: "cypress/screenshots"
           channels: "paw-cypress-test"
-          message: "ANdre test!!!"
+          message: "ANdre testgy!!!"
   # build:
   #   runs-on: ubuntu-latest
   #   needs: cypress-run
