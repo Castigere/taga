@@ -8,13 +8,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Cypress run
-        uses: cypress-io/github-action@v1
-        with:
-          browser: chrome
-          headless: true
-          start: npm run startwithmock
-          wait-on: http://localhost:3000
+      # - name: Cypress run
+      #   uses: cypress-io/github-action@v1
+      #   with:
+      #     browser: chrome
+      #     headless: true
+      #     start: npm run startwithmock
+      #     wait-on: http://localhost:3000
       - name: Cypress to Slack Reporter Test
         uses: castigere/taja@master
         with:
